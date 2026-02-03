@@ -1,41 +1,52 @@
 [
   {
     "id": 1,
-    "name": "Falcon X1",
-    "photo": "stick1.jpg",
+    "name": "Oxdog REVENGER 29 BK Special edition ROUND",
+    "photo": "https://static.necy.eu/i/g/170x170/172247.webp",
     "features": [
-      "Материал: карбон 100%",
-      "Вес: 225 г",
-      "Кривизна лезвия: C",
-      "Жесткость: Medium",
-      "Подходит для: нападающих"
-    ],
-    "price": "169.99"
+      "Сезон: 2023/2024",
+      "Flex: 29mm",
+      "Grip: Touch",
+      "Материал: Composite",
+      "Форма рукояти: Round",
+      "Лезвие: OptiLight",
+      "Жесткость лезвия: Medium - lightweight",
+      "IFF сертификат: yes",
+      "Вес: 246g",
+      "Тип шафта: straight"
+    ]
   },
   {
     "id": 2,
-    "name": "Storm Pro 2",
-    "photo": "stick2.jpg",
+    "name": "Oxdog PLAYER 33 BL",
+    "photo": "https://static.necy.eu/i/g/170x170/155964.webp",
     "features": [
-      "Материал: композит",
-      "Вес: 240 г",
-      "Кривизна лезвия: B",
-      "Жесткость: Hard",
-      "Подходит для: универсалов"
-    ],
-    "price": "129.50"
+      "Сезон: 2022/2023",
+      "Flex: 33mm",
+      "Grip: Touch",
+      "Материал: Fiberglass",
+      "Форма рукояти: Round",
+      "Лезвие: Block",
+      "Жесткость лезвия: Soft",
+      "IFF сертификат: yes",
+      "Вес: 242g",
+      "Тип шафта: straight"
+    ]
   },
   {
     "id": 3,
-    "name": "Viper Lite",
-    "photo": "stick3.jpg",
+    "name": "Oxdog ULTRAFORCE 30 WT ROUND",
+    "photo": "https://static.necy.eu/i/g/170x170/169955.webp",
     "features": [
-      "Материал: карбон + стекловолокно",
-      "Вес: 210 г",
-      "Кривизна лезвия: C",
-      "Жесткость: Soft",
-      "Подходит для: молодых игроков"
-    ],
-    "price": "99.00"
+      "Сезон: 2023/2024",
+      "Flex: 30mm",
+      "Grip: Touch",
+      "Материал: Composite",
+      "Форма рукояти: Round",
+      "Лезвие: Avox",
+      "Жесткость лезвия: Medium",
+      "IFF сертификат: yes",
+      "Тип шафта: straight"
+    ]
   }
 ]

@@ -145,7 +145,6 @@ main { padding: 24px 0 36px; }
 }
 
 .card a { text-decoration: none; color: inherit; display: block; }
-.card .price { margin: 6px 0 8px; font-size: 16px; color: var(--primary-dark); }
 .card .more {
   display: inline-flex;
   align-items: center;
@@ -182,12 +181,6 @@ main { padding: 24px 0 36px; }
 }
 
 .info { max-width: 560px; }
-
-.price {
-  font-weight: 700;
-  color: var(--primary-dark);
-  font-size: 20px;
-}
 
 #stick-features {
   list-style: none;
