@@ -13,6 +13,8 @@ async function loadSticks() {
         <a href="/details.html?id=${encodeURIComponent(s.id)}">
           <img src="/images/${s.photo}" alt="${s.name}" />
           <h3>${s.name}</h3>
+          <p class="price">${s.price ? (s.price + ' €') : ''}</p>
+          <span class="more">Подробнее →</span>
         </a>
       `;
       grid.appendChild(card);

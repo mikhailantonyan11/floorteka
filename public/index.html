@@ -7,16 +7,43 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Магазин флорбольных клюшек</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Магазин флорбольных клюшек</h1>
+        <p class="subtitle">Легкие, прочные, для любого стиля игры</p>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section id="sticks-grid" class="grid"></section>
+    <section class="hero container">
+      <div class="hero-text">
+        <h2>Подберите идеальную клюшку</h2>
+        <p>Подбор по жесткости, весу и стилю игры — быстро и удобно.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-stat">
+          <span class="hero-num">3+</span>
+          <span class="hero-label">модели в каталоге</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-num">100%</span>
+          <span class="hero-label">оригинальные бренды</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="section-title">Каталог</h2>
+      <section id="sticks-grid" class="grid"></section>
+    </section>
   </main>
 
-  <footer>
-    <small>&copy; Магазин клюшек</small>
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; Магазин клюшек</small>
+    </div>
   </footer>
 
   <script src="js/index.js"></script>
