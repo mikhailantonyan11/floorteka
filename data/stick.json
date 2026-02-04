@@ -1,52 +1,147 @@
 [
   {
-    "id": 1,
-    "name": "Oxdog REVENGER 29 BK Special edition ROUND",
-    "photo": "https://static.necy.eu/i/g/170x170/172247.webp",
+    "id": "oxdog-extremefast-27-gr-round",
+    "brand": "OXDOG",
+    "name": "Oxdog EXTREMEFAST HST 27 GR ROUND MBC2",
+    "photo": "oxdog-gr.png",
     "features": [
-      "Сезон: 2023/2024",
-      "Flex: 29mm",
-      "Grip: Touch",
-      "Материал: Composite",
-      "Форма рукояти: Round",
-      "Лезвие: OptiLight",
-      "Жесткость лезвия: Medium - lightweight",
-      "IFF сертификат: yes",
-      "Вес: 246g",
-      "Тип шафта: straight"
+      "Сезон: 2024/2025",
+      "Жесткость (Flex): 27 мм",
+      "Грипп: SUPERTECH",
+      "Материал: карбон",
+      "Форма рукояти: круглая (Round)",
+      "Лезвие: FSL (FASTSHOOTLIGHT) CARBON 2",
+      "Жесткость лезвия: средняя (Medium lightweight)",
+      "IFF сертификат: да",
+      "Тип шафта: прямой (straight)",
+      "Содержание карбона: 100% карбон"
     ]
   },
   {
-    "id": 2,
-    "name": "Oxdog PLAYER 33 BL",
-    "photo": "https://static.necy.eu/i/g/170x170/155964.webp",
+    "id": "oxdog-extremefast-27-gr-sweoval",
+    "brand": "OXDOG",
+    "name": "Oxdog EXTREMEFAST HST 27 GR SWEOVAL MBC2",
+    "photo": "oxdog-gr.png",
     "features": [
-      "Сезон: 2022/2023",
-      "Flex: 33mm",
-      "Grip: Touch",
-      "Материал: Fiberglass",
-      "Форма рукояти: Round",
-      "Лезвие: Block",
-      "Жесткость лезвия: Soft",
-      "IFF сертификат: yes",
-      "Вес: 242g",
-      "Тип шафта: straight"
+      "Сезон: 2024/2025",
+      "Жесткость (Flex): 27 мм",
+      "Грипп: SUPERTECH",
+      "Материал: карбон",
+      "Форма рукояти: SWEOVAL (шведский овал)",
+      "Лезвие: FSL (FASTSHOOTLIGHT) CARBON 2",
+      "Жесткость лезвия: средняя (Medium lightweight)",
+      "IFF сертификат: да",
+      "Тип шафта: прямой (straight)",
+      "Содержание карбона: 100% карбон"
     ]
   },
   {
-    "id": 3,
-    "name": "Oxdog ULTRAFORCE 30 WT ROUND",
-    "photo": "https://static.necy.eu/i/g/170x170/169955.webp",
+    "id": "oxdog-extremefast-27-lg-sweoval",
+    "brand": "OXDOG",
+    "name": "Oxdog EXTREMEFAST HST 27 LG SWEOVAL MBC2",
+    "photo": "oxdog-lg.png",
     "features": [
-      "Сезон: 2023/2024",
-      "Flex: 30mm",
-      "Grip: Touch",
-      "Материал: Composite",
-      "Форма рукояти: Round",
-      "Лезвие: Avox",
-      "Жесткость лезвия: Medium",
-      "IFF сертификат: yes",
-      "Тип шафта: straight"
+      "Сезон: 2025/2026",
+      "Жесткость (Flex): 27 мм",
+      "Грипп: SUPERTECH",
+      "Материал: карбон",
+      "Форма рукояти: SWEOVAL (шведский овал)",
+      "Лезвие: FSL (FASTSHOOTLIGHT) CARBON 2",
+      "Жесткость лезвия: средняя (Medium lightweight)",
+      "IFF сертификат: да",
+      "Тип шафта: прямой (straight)",
+      "Содержание карбона: 100% карбон"
+    ]
+  },
+  {
+    "id": "oxdog-extremefast-27-lg-round",
+    "brand": "OXDOG",
+    "name": "Oxdog EXTREMEFAST HST 27 LG ROUND MBC2",
+    "photo": "oxdog-lg.png",
+    "features": [
+      "Сезон: 2025/2026",
+      "Жесткость (Flex): 27 мм",
+      "Грипп: SUPERTECH",
+      "Материал: карбон",
+      "Форма рукояти: круглая (Round)",
+      "Лезвие: FSL (FASTSHOOTLIGHT) CARBON 2",
+      "Жесткость лезвия: средняя (Medium lightweight)",
+      "IFF сертификат: да",
+      "Вес: 188 г",
+      "Тип шафта: прямой (straight)",
+      "Содержание карбона: 100% карбон"
+    ]
+  },
+  {
+    "id": "oxdog-ultimatelight-27-fp-round-mbc2",
+    "brand": "OXDOG",
+    "name": "Oxdog ULTIMATELIGHT HES 27 FP ROUND MBC2",
+    "photo": "ultimatelight-fp.png",
+    "features": [
+      "Сезон: 2024/2025",
+      "Жесткость (Flex): 27 мм",
+      "Грипп: SUPERTECH",
+      "Материал: карбон",
+      "Форма рукояти: круглая (Round)",
+      "Лезвие: FSL (FASTSHOOTLIGHT) CARBON 2",
+      "Жесткость лезвия: средняя (Medium lightweight)",
+      "IFF сертификат: да",
+      "Тип шафта: прямой (straight)",
+      "Содержание карбона: 100% карбон"
+    ]
+  },
+  {
+    "id": "oxdog-ultimatelight-29-tq-round-mbc",
+    "brand": "OXDOG",
+    "name": "Oxdog ULTIMATELIGHT HES 29 TQ ROUND MBC",
+    "photo": "ultimatelight-tq.png",
+    "features": [
+      "Сезон: 2025/2026",
+      "Жесткость (Flex): 29 мм",
+      "Грипп: SUPERTECH",
+      "Материал: карбон",
+      "Форма рукояти: круглая (Round)",
+      "Лезвие: Highlight CARBON",
+      "Жесткость лезвия: средняя (Medium lightweight)",
+      "IFF сертификат: да",
+      "Тип шафта: прямой (straight)",
+      "Содержание карбона: 100% карбон"
+    ]
+  },
+  {
+    "id": "oxdog-ultimatelight-27-tq-sweoval-mbc",
+    "brand": "OXDOG",
+    "name": "Oxdog ULTIMATELIGHT HES 27 TQ SWEOVAL MBC",
+    "photo": "ultimatelight-tq.png",
+    "features": [
+      "Сезон: 2025/2026",
+      "Жесткость (Flex): 27 мм",
+      "Грипп: SUPERTECH",
+      "Материал: карбон",
+      "Форма рукояти: SWEOVAL (шведский овал)",
+      "Лезвие: Highlight CARBON",
+      "Жесткость лезвия: средняя (Medium lightweight)",
+      "IFF сертификат: да",
+      "Тип шафта: прямой (straight)",
+      "Содержание карбона: 100% карбон"
+    ]
+  },
+  {
+    "id": "oxdog-ultimatelight-27-tq-round-mbc",
+    "brand": "OXDOG",
+    "name": "Oxdog ULTIMATELIGHT HES 27 TQ ROUND MBC",
+    "photo": "ultimatelight-tq.png",
+    "features": [
+      "Сезон: 2025/2026",
+      "Жесткость (Flex): 27 мм",
+      "Грипп: SUPERTECH",
+      "Материал: карбон",
+      "Форма рукояти: круглая (Round)",
+      "Лезвие: Highlight CARBON",
+      "Жесткость лезвия: средняя (Medium lightweight)",
+      "IFF сертификат: да",
+      "Тип шафта: прямой (straight)",
+      "Содержание карбона: 100% карбон"
     ]
   }
 ]

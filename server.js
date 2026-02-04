@@ -5,6 +5,12 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, 'data', 'stick.json');
+const IMAGE_MAP = {
+  'oxdog-gr.png': 'C:\\Users\\user\\.cursor\\projects\\c-Users-user-Desktop\\assets\\c__Users_user_AppData_Roaming_Cursor_User_workspaceStorage_ff19f60d4264bba57e44dc56532e06ea_images_photo_2026-02-03_16-15-35-8a695a80-e3d7-4680-9edb-2555d8be34f4.png',
+  'oxdog-lg.png': 'C:\\Users\\user\\.cursor\\projects\\c-Users-user-Desktop\\assets\\c__Users_user_AppData_Roaming_Cursor_User_workspaceStorage_ff19f60d4264bba57e44dc56532e06ea_images_photo_2026-02-03_16-15-24-0f361cbf-b969-49ed-bd4f-21dff61c44ac.png',
+  'ultimatelight-fp.png': 'C:\\Users\\user\\.cursor\\projects\\c-Users-user-Desktop\\assets\\c__Users_user_AppData_Roaming_Cursor_User_workspaceStorage_ff19f60d4264bba57e44dc56532e06ea_images_photo_2026-02-03_17-33-38-eeaf0e58-8dde-407f-8f77-7823c6cf53b4.png',
+  'ultimatelight-tq.png': 'C:\\Users\\user\\.cursor\\projects\\c-Users-user-Desktop\\assets\\c__Users_user_AppData_Roaming_Cursor_User_workspaceStorage_ff19f60d4264bba57e44dc56532e06ea_images_photo_2026-02-03_17-33-33-1af4b159-1b1c-4c0b-b542-87a6f5469a8c.png'
+};
 
 // CORS if you preview from another origin (optional)
 const cors = require('cors');
@@ -12,6 +18,13 @@ app.use(cors());
 
 // Раздача статических файлов (HTML/CSS/JS/ images)
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Локальные изображения из вложений (временный источник)
+app.get('/images/:file', (req, res) => {
+  const filePath = IMAGE_MAP[req.params.file];
+  if (!filePath) return res.status(404).end();
+  res.sendFile(filePath);
+});
 
 // API: получить все клюшки
 app.get('/api/sticks', (req, res) => {

@@ -19,7 +19,7 @@ async function loadDetails() {
     const s = await res.json();
 
     document.getElementById('stick-name').textContent = s.name;
-    document.getElementById('stick-photo').src = s.photo;
+    document.getElementById('stick-photo').src = '/images/' + s.photo;
     document.getElementById('stick-photo').alt = s.name;
     document.getElementById('stick-title').textContent = s.name;
     const ul = document.getElementById('stick-features');
