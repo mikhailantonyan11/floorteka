@@ -6,6 +6,7 @@ const BRANDS = [
 ];
 
 let cachedSticks = null;
+let currentView = { type: 'all', brandId: 'all', title: 'Все клюшки', group: null };
 
 function renderBrands(includeAll = false) {
   const grid = document.getElementById('brands-grid');
@@ -40,7 +41,36 @@ function getModelName(stickName) {
   if (!stickName) return 'Модель';
   if (stickName.toUpperCase().includes('EXTREMEFAST')) return 'EXTREMEFAST';
   if (stickName.toUpperCase().includes('ULTIMATELIGHT')) return 'ULTIMATELIGHT';
+  if (stickName.toUpperCase().includes('QUICK POWER')) return 'QUICK POWER HES';
+  if (stickName.toUpperCase().includes('QUICK LIGHT')) return 'QUICK LIGHT HES';
+  if (stickName.toUpperCase().includes('ULTRALIGHT')) return 'ULTRALIGHT HES';
+  if (stickName.toUpperCase().includes('EXTREMEPOWER')) return 'EXTREMEPOWER';
+  if (stickName.toUpperCase().includes('HYPERLIGHT HES')) return 'HYPERLIGHT HES';
+  if (stickName.toUpperCase().includes('HYPERLIGHT 2.0')) return 'HYPERLIGHT 2.0';
   return 'Модель';
+}
+
+function renderSticksList(items, emptyMessage) {
+  const grid = document.getElementById('sticks-grid');
+  grid.innerHTML = '';
+
+  if (!items.length) {
+    grid.innerHTML = `<p>${emptyMessage}</p>`;
+    return;
+  }
+
+  items.forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <a href="/details.html?id=${encodeURIComponent(s.id)}">
+        <img src="/images/${s.photo}" alt="${s.name}" />
+        <h3>${s.name}</h3>
+        <span class="more">Подробнее →</span>
+      </a>
+    `;
+    grid.appendChild(card);
+  });
 }
 
 function renderModelCards(groups, onClick) {
@@ -97,18 +127,8 @@ async function showModels(brandId, title) {
   }
 
   if (brandId === 'all') {
-    models.forEach(s => {
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.innerHTML = `
-        <a href="/details.html?id=${encodeURIComponent(s.id)}">
-          <img src="/images/${s.photo}" alt="${s.name}" />
-          <h3>${s.name}</h3>
-          <span class="more">Подробнее →</span>
-        </a>
-      `;
-      grid.appendChild(card);
-    });
+    currentView = { type: 'all', brandId: 'all', title: 'Все клюшки', group: null };
+    renderSticksList(models, 'Нет клюшек в каталоге.');
   } else {
     const groupsMap = new Map();
     models.forEach(s => {
@@ -119,6 +139,7 @@ async function showModels(brandId, title) {
       groupsMap.get(modelName).items.push(s);
     });
     const groups = Array.from(groupsMap.values());
+    currentView = { type: 'brand', brandId, title, group: null };
     renderModelCards(groups, group => showModelItems(title, group));
   }
 
@@ -144,9 +165,66 @@ function showModelItems(brandTitle, group) {
     `;
     grid.appendChild(card);
   });
+
+  currentView = { type: 'group', brandId: null, title: brandTitle, group };
+}
+
+async function applySearch(query) {
+  const section = document.getElementById('models-section');
+  const heading = document.getElementById('models-title');
+  const clearBtn = document.getElementById('clear-search');
+  const term = query.trim().toLowerCase();
+  clearBtn.hidden = term.length === 0;
+
+  if (!term) {
+    await restoreView();
+    return;
+  }
+
+  try {
+    const sticks = await fetchSticks();
+    const filtered = sticks.filter(s =>
+      String(s.name || '').toLowerCase().includes(term)
+    );
+    heading.textContent = `Поиск: ${query.trim()}`;
+    renderSticksList(filtered, 'Ничего не найдено.');
+    section.hidden = false;
+  } catch (e) {
+    console.error(e);
+    heading.textContent = 'Поиск';
+    renderSticksList([], 'Ошибка при поиске.');
+    section.hidden = false;
+  }
+}
+
+async function restoreView() {
+  if (currentView.type === 'group' && currentView.group) {
+    showModelItems(currentView.title, currentView.group);
+    return;
+  }
+  const brandId = currentView.brandId || 'all';
+  const title = currentView.title || '';
+  await showModels(brandId, title);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   renderBrands();
   showModels('all', '');
+
+  const searchInput = document.getElementById('stick-search');
+  const clearBtn = document.getElementById('clear-search');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      applySearch(searchInput.value);
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      applySearch('');
+      searchInput.focus();
+    });
+  }
 });

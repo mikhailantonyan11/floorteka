@@ -22,9 +22,28 @@ async function loadDetails() {
     document.getElementById('stick-photo').src = '/images/' + s.photo;
     document.getElementById('stick-photo').alt = s.name;
     document.getElementById('stick-title').textContent = s.name;
+    const flexEl = document.getElementById('stick-flex');
+    const lengthsEl = document.getElementById('stick-lengths');
+    let flexText = '';
+    let lengthsText = '';
+    const features = (s.features || []).filter(f => {
+      if (f.startsWith('Жесткость (Flex):')) {
+        flexText = f.replace('Жесткость (Flex):', 'Flex:').trim();
+        return false;
+      }
+      if (f.startsWith('Длины:')) {
+        lengthsText = f.replace('Длины:', 'Длины:').trim();
+        return false;
+      }
+      return true;
+    });
+
+    flexEl.textContent = flexText || 'Flex: —';
+    lengthsEl.textContent = lengthsText || 'Длины: —';
+
     const ul = document.getElementById('stick-features');
     ul.innerHTML = '';
-    (s.features || []).forEach(f => {
+    features.forEach(f => {
       const li = document.createElement('li');
       li.textContent = f;
       ul.appendChild(li);
